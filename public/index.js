@@ -1,4 +1,44 @@
 "use strict";
+function getDate() {
+    let date = new Date();
+    let day = date.getDate();
+    let month = date.getMonth() + 1;
+    let year = date.getFullYear();
+    let dayNumber = date.getDay();
+    let dateString = `${day}/${month}/${year}`;
+    let dayName = '';
+    switch (dayNumber) {
+        case 1:
+            dayName = 'Segunda-Feira';
+            break;
+        case 2:
+            dayName = 'Terça-Feira';
+            break;
+        case 3:
+            dayName = 'Quarta-Feira';
+            break;
+        case 4:
+            dayName = 'Quinta-Feira';
+            break;
+        case 5:
+            dayName = 'Sexta-Feira';
+            break;
+        case 6:
+            dayName = 'Sábado';
+            break;
+        case 7:
+            dayName = 'Domingo';
+            break;
+    }
+    let dateArea = document.getElementById('date');
+    let h2 = document.createElement('h2');
+    h2.innerText = dateString;
+    let span = document.createElement('span');
+    span.innerText = dayName;
+    span.classList.add('span-decoration');
+    dateArea.append(h2, span);
+}
+getDate();
 let count = 0;
 let addTaskBtn = document.getElementById('newTaskBtn');
 let addTaskInput = document.getElementById('newTaskInput');

@@ -74,3 +74,14 @@ body {
 #deleteBtn:hover{
   cursor: pointer;
 }
+
+
+.span-decoration{
+  font-size: 16px;
+  color: darkgray;
+  font-weight: bold;
+}
+
+#date{
+  margin-bottom: 100px;
+}
